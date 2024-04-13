@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: radial-gradient(circle, #737373, #0D0D0D);
+    padding: 10px;
+    align-content: center;
+}
+
+.list-table {
+    width: 100%;
+    max-width: 540px;
+    margin: 20px auto 20px;
+    padding: 40px 30px 70px;
+    background-color: #D9D9D9;
+    border-radius: 5px;
+    flex-direction: column;
+    
+}
+
+.list-table h1 {
+    text-align: center;
+}
+
+.admin {
+    background-color: #A6A5A4;
+    width: 100%;
+    margin: 15px auto;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#inputTask {
+    flex: 1; /* Hace que ocupe todo su lugar*/
+    border: none;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+}
+
+.add {
+    outline: none;
+    background: #737373;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.add:hover {
+    background: #0D0D0D;
+    cursor: pointer;
+}
+
+.tasks {
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+ul li {
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #737373;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover {
+    background-color: #404040;
+    border-radius: 6px;
+}
+
+.tasks::-webkit-scrollbar {
+    width: 5px;
+}
+
+.tasks::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px;
+}
+
+.tasks::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+.tasks::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
